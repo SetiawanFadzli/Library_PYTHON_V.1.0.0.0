@@ -5,7 +5,9 @@ from PyQt5.QtWidgets import QMessageBox
 from PyQt5.QtWidgets import QTableWidgetItem
 from PyQt5.uic import loadUi
 from PyQt5.QtCore import QDate
+from datetime import date, datetime
 import pymysql
+
 
 class pinjam(QMainWindow):
     def __init__(self):
@@ -105,9 +107,16 @@ class pinjam(QMainWindow):
         #ambilDataBuku
         ISBN=self.editISBN.text()
 
+        #ambilDataPinja Jumlah
+        pinjamJumlah=self.editPinjamJumlah.text()
+        
+        #tanggal pinjam
+        today=date.today()
+        
+
         conn=pymysql.connect(host="localhost",user="root",password="",db="perpustakaan_db")
-        query="INSERT INTO tbl_pinjam(id_member,id_buku) VALUES (%s, %s)"
-        data=(int(idMember),int(ISBN),)
+        query="INSERT INTO tbl_pinjam(id_member,id_buku, jumlah, tgl_pinjam) VALUES (%s, %s, %s, %s)"
+        data=(int(idMember),int(ISBN),int(pinjamJumlah), today)
         cursor=conn.cursor()
         cursor.execute(query,data)
         conn.commit()

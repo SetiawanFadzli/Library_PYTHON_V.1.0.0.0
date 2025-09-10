@@ -141,10 +141,10 @@
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>340</x>
-      <y>450</y>
+      <x>410</x>
+      <y>460</y>
       <width>75</width>
-      <height>61</height>
+      <height>41</height>
      </rect>
     </property>
     <property name="text">
@@ -275,10 +275,10 @@
    <widget class="QPushButton" name="btnPinjam">
     <property name="geometry">
      <rect>
-      <x>230</x>
-      <y>450</y>
+      <x>320</x>
+      <y>460</y>
       <width>75</width>
-      <height>61</height>
+      <height>41</height>
      </rect>
     </property>
     <property name="text">
@@ -306,6 +306,32 @@
       <width>110</width>
       <height>22</height>
      </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>450</y>
+      <width>141</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:16pt; font-weight:600;&quot;&gt;Count Book&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="editPinjamJumlah">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>460</y>
+      <width>113</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
     </property>
    </widget>
   </widget>
